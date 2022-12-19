@@ -13,9 +13,11 @@
 	"name": "server",
 	"version": "1.0.0",
 	"main": "index.js",
-	"scripts": {
-		"test": "mocha"
-	},
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server",
+    "test": "jest"
+  },
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
