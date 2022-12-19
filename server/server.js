@@ -1,5 +1,12 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
+app.use(
+	cors({
+		origin: "*",
+	})
+);
 
 app.get("/api", (req, res) => {
 	fetch("https://api.flickr.com/services/feeds/photos_public.gne?format=json")
