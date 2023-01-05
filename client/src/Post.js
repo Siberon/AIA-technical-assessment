@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "@mantine/core";
+import { Table, Image } from "@mantine/core";
 
 const Post = ({ post }) => {
 	return (
@@ -22,7 +22,7 @@ const Post = ({ post }) => {
 							wordWrap: "break-word",
 						}}
 					>
-						{post.link}
+						<Image src={post.media.m} alt={post.title} />
 					</td>
 					<td
 						style={{

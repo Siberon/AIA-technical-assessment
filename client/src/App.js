@@ -9,13 +9,13 @@ const App = () => {
 	const [posts, setPosts] = useState([{}]);
 	const [searchResults, setSearchResults] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [postsPerPage] = useState(5);
+	const [postsPerPage] = useState(1);
 
 	const indexOfLastPost = currentPage * postsPerPage;
 	const indexOfFirstPost = indexOfLastPost - postsPerPage;
 	const currentPosts = searchResults.slice(indexOfFirstPost, indexOfLastPost);
 
-	const url = "http://192.168.100.31:5000/api";
+	const url = "http://localhost:5000/api";
 	useEffect(() => {
 		axios
 			.get(url)
@@ -40,7 +40,7 @@ const App = () => {
 							Title
 						</th>
 						<th style={{ minWidth: "30vw", maxWidth: "30vw", padding: "0px" }}>
-							Link
+							Image
 						</th>
 						<th style={{ minWidth: "20vw", maxWidth: "20vw", padding: "0px" }}>
 							Date Taken
